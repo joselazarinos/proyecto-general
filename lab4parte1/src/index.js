@@ -1,6 +1,7 @@
 import  React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
+import Contenido from './Contenido.js'
 
 const App = () => {
   const [ good, setGood ] = useState(0)
@@ -34,12 +35,15 @@ const App = () => {
       <button onClick={handleClick}>good</button>
       <button onClick={onClick}>neutral</button>
       <button onClick={didClick}>bad</button>
-      <p>good: {good}</p>
-      <p>neutral: {neutral}</p>
-      <p>bad: {bad}</p>
-      <p>all : {all}</p>
-      <p>Average: {average}</p>
-      <p>positive: {positive}</p>
+      <Contenido 
+      good = {good}
+      neutral = {neutral}
+      bad = {bad}
+      all = {all}
+      average = {average}
+      positive = {positive}
+      />
+      
     </div>
   )
 }
